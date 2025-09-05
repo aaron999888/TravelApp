@@ -19,6 +19,7 @@ A beautiful and modern mobile travel application built with React Native and Exp
 ### 📅 Enhanced Trip Planner
 - **Budget Planning**: Set and track trip budgets
 - **Flight & Hotel Search**: Real-time search with mock data
+- **Restaurant Discovery**: Find high-rated restaurants (4+ stars) near your location
 - **Loyalty Program Integration**: 
   - Delta Diamond perks (free upgrades, priority boarding, lounge access)
   - Hilton Honors benefits (room upgrades, late checkout, owner pricing)
@@ -30,6 +31,14 @@ A beautiful and modern mobile travel application built with React Native and Exp
 - **Flight Search Results**: Display flights with loyalty perks
 - **Hotel Search Results**: Show hotels with member benefits
 - **Price Comparison**: Compare options within budget
+
+### 🍽️ Restaurant Discovery
+- **Location-Based Search**: Find restaurants near your current location
+- **High-Rated Filtering**: Only shows restaurants with 4+ star ratings
+- **Distance Calculation**: Displays distance from your location
+- **Real-Time Data**: Uses Google Places API for accurate, up-to-date information
+- **Clean UI**: Easy-to-read restaurant cards with ratings and pricing
+- **Pull-to-Refresh**: Update results by pulling down on the list
 - **Selection Interface**: Choose flights and hotels
 - **Calendar Integration**: Sync selected bookings to Google Calendar
 
@@ -74,13 +83,17 @@ src/
 │   ├── DestinationsScreen.tsx
 │   ├── TripPlannerScreen.tsx
 │   ├── BookingResultsScreen.tsx  # Flight & hotel results
+│   ├── RestaurantScreen.tsx      # Restaurant discovery
 │   ├── ProfileScreen.tsx
 │   ├── DestinationDetailScreen.tsx
 │   └── TripDetailScreen.tsx
 ├── services/           # Business logic and API services
 │   ├── bookingService.ts      # Flight & hotel search
 │   ├── calendarService.ts     # Google Calendar integration
-│   └── sharingService.ts      # Trip sharing functionality
+│   ├── sharingService.ts      # Trip sharing functionality
+│   └── placesService.ts       # Google Places API integration
+├── config/             # Configuration files
+│   └── api.ts          # API keys and configuration
 └── types/              # TypeScript type definitions
     └── index.ts
 ```
@@ -112,7 +125,17 @@ npm install
 npx expo start
 ```
 
-4. Run on your preferred platform:
+4. Configure Google Places API (for restaurant discovery):
+   - Follow the detailed setup guide in `GOOGLE_PLACES_SETUP.md`
+   - Get your API key from Google Cloud Console
+   - Update `src/config/api.ts` with your API key
+
+5. Start the development server:
+```bash
+npx expo start
+```
+
+6. Run on your preferred platform:
    - Press `i` for iOS simulator
    - Press `a` for Android emulator
    - Scan QR code with Expo Go app on your device

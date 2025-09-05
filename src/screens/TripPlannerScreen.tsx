@@ -288,6 +288,14 @@ const TripPlannerScreen: React.FC<Props> = ({ navigation }) => {
             <Ionicons name="add-circle" size={24} color="#007AFF" />
             <Text style={styles.createButtonText}>Create Trip Only</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity 
+            style={styles.restaurantButton} 
+            onPress={() => navigation.navigate('Restaurants')}
+          >
+            <Ionicons name="restaurant" size={20} color="#FF6B35" />
+            <Text style={styles.restaurantButtonText}>Find Restaurants</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -450,6 +458,28 @@ const styles = StyleSheet.create({
   },
   createButtonText: {
     color: '#007AFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginLeft: 8,
+  },
+  restaurantButton: {
+    backgroundColor: '#fff',
+    borderWidth: 1,
+    borderColor: '#FF6B35',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    borderRadius: 12,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3,
+    marginTop: 8,
+  },
+  restaurantButtonText: {
+    color: '#FF6B35',
     fontSize: 16,
     fontWeight: 'bold',
     marginLeft: 8,

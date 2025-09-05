@@ -11,6 +11,7 @@ import ProfileScreen from '../screens/ProfileScreen';
 import DestinationDetailScreen from '../screens/DestinationDetailScreen';
 import TripDetailScreen from '../screens/TripDetailScreen';
 import BookingResultsScreen from '../screens/BookingResultsScreen';
+import RestaurantScreen from '../screens/RestaurantScreen';
 
 import { RootStackParamList } from '../types';
 
@@ -63,6 +64,11 @@ const TripPlannerStack = () => (
       name="BookingResults" 
       component={BookingResultsScreen}
       options={{ title: 'Booking Results' }}
+    />
+    <Stack.Screen 
+      name="Restaurants" 
+      component={RestaurantScreen}
+      options={{ title: 'Nearby Restaurants' }}
     />
     <Stack.Screen 
       name="TripDetail" 

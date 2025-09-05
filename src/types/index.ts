@@ -109,4 +109,5 @@ export type RootStackParamList = {
     endDate: string; 
     budget: number;
   };
+  Restaurants: undefined;
 };
