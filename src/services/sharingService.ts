@@ -155,3 +155,4 @@ export const getUserByEmail = (email: string): User | null => {
 export const getAllUsers = (): User[] => {
   return [...mockUsers]; // Return copy of array - like copying data in C
 };
+

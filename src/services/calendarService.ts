@@ -122,3 +122,4 @@ export class CalendarService {
 
 // Export singleton instance - like a global variable in C
 export const calendarService = CalendarService.getInstance();
+

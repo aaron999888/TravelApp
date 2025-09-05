@@ -157,3 +157,4 @@ export const getTripsByStatus = async (status: Trip['status']): Promise<Trip[]> 
     return [];
   }
 };
+
