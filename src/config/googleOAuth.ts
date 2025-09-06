@@ -4,11 +4,11 @@
 
 // Google OAuth Client ID - like a #define constant in C
 // Replace with your actual Google OAuth Client ID from Google Cloud Console
-export const GOOGLE_CLIENT_ID = 'your-google-client-id.apps.googleusercontent.com';
+export const GOOGLE_CLIENT_ID = '955410291725-1p0pibv3tlkobctg695evref58ncv8of.apps.googleusercontent.com';
 
 // Google OAuth Redirect URI - like a #define constant in C
 // This should match the redirect URI configured in Google Cloud Console
-export const GOOGLE_REDIRECT_URI = 'https://auth.expo.io/@your-expo-username/your-app-slug';
+export const GOOGLE_REDIRECT_URI = 'https://auth.expo.io/@aaron999888/TravelAppMobile';
 
 // Google Calendar API Scopes - like permission flags in C
 export const GOOGLE_SCOPES = [
