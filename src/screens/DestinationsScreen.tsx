@@ -361,7 +361,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginBottom: 12,
   },
-  categoryContainer: {
+  categoryBadgeContainer: {
     flexDirection: 'row',
   },
   categoryBadge: {

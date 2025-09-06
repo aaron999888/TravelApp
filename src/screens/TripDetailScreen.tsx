@@ -126,7 +126,10 @@ const TripDetailScreen: React.FC<Props> = ({ navigation, route }) => {
 
         {/* Sharing Component */}
         <View style={styles.section}>
-          <SharingComponent tripId={trip.id} currentUser={currentUser} />
+          <SharingComponent trip={trip} onSharingStatusChange={(isShared) => {
+            // Handle sharing status change if needed
+            console.log('Sharing status changed:', isShared);
+          }} />
         </View>
 
         {/* Destinations */}

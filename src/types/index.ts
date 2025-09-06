@@ -72,6 +72,9 @@ export interface Trip {
   sharedWith: string[];
   createdBy: string;
   lastModified: string;
+  // Sharing status for UI display
+  isShared?: boolean;
+  sharedWithSpouse?: boolean;
 }
 
 export interface User {
@@ -109,5 +112,26 @@ export type RootStackParamList = {
     endDate: string; 
     budget: number;
   };
-  Restaurants: undefined;
+  Restaurants: { sharedTrip?: Trip };
 };
+
+// Interface for sharing invitation - like a C struct
+export interface SharingInvitation {
+  id: string;
+  tripId: string;
+  fromUser: string;
+  toUser: string;
+  status: 'pending' | 'accepted' | 'declined';
+  createdAt: string;
+}
+
+// Interface for shared trip data - like a C struct
+export interface SharedTrip {
+  id: string;
+  tripData: Trip;
+  sharedWith: string[];
+  createdBy: string;
+  createdAt: string;
+  lastModified: string;
+  isActive: boolean;
+}
